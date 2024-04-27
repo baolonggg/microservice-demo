@@ -1,3 +1,2 @@
 Testing CI/CD Pipeline
-Testing CI 
-- kubescape integration with Github Action
+- CI Phase: Kubescape integration with Github Action
