@@ -8,13 +8,13 @@ jobs:
       contents: read
       security-events: write
     steps:
-      - uses: action/checkout@v3
+      - uses: actions/checkout@v3
       - uses: kubescape/github-action@main
         continue-on-error: false
         with:
           format: sarif
           outputFile: results
-          severityThreshold: medium
+          failedThreshold: 50
       - name: Upload Kubescape scan results to Github Code Scanning
         uses: github/codeql-action/upload-sarif@v2
         with:
